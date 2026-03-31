@@ -30,8 +30,38 @@ header h3 {
     flex-direction: column;
     align-items: center;
 }
-
-
+.imagecarousel {
+    position: relative;
+}
+.image {
+    display: none;
+}
+.image:first-of-type {
+    display: block;
+}
+.image img {
+    border-radius: 10px;
+}
+.last {
+    top: 50%;
+    left: 15px;
+}
+.next {
+    top: 50%;
+    right: 15px;
+}
+.last, .next {
+    position: absolute;
+    color: blue;
+    transform: translateY(-50%);
+}
+.last button, .next button {
+    background-color: transparent;
+    border: none;
+    color: blue;
+    font-size: 300%;
+    cursor: pointer;
+}
 footer {
     padding: 2em 0;
     font-size: 90%;
