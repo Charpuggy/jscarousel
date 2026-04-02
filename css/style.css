@@ -52,15 +52,45 @@ header h3 {
 }
 .last, .next {
     position: absolute;
-    color: blue;
+    color: blue ;
     transform: translateY(-50%);
-}
-.last button, .next button {
+    top: 50%;
+    font-size: 200%;
+    padding: .25em;
+    border-radius: 50vh;
+    transition: ease-in-out .3s;
     background-color: transparent;
     border: none;
-    color: blue;
     font-size: 300%;
     cursor: pointer;
+    
+}
+.last:hover, .next:hover {
+    color: gold;
+    background-color: black;
+    cursor: pointer;
+}
+.dots {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 9px;
+}
+.dot {
+    width: 7px;
+    height: 7px;
+    background-color: silver;
+    cursor: pointer;
+}
+.active {
+    background-color: gold;
+}
+.fadeout {
+    animation: fade 1000ms ease-in-out;
+}
+@keyframes fade {
+    from { opacity: .2; }
+    to   { opacity: 1; }
 }
 footer {
     padding: 2em 0;
