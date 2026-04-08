@@ -25,3 +25,7 @@ function showImage(i) {
     theImages[intIndex].style.display = "block";
     theDots[intIndex].className += " active";
 }
+
+setInterval(function() {
+    showImage(1);
+}, 5000);
